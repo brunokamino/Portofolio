@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Currículo e portfólio de Bruno Kamino Yamamoto, Assistente de MIS Júnior com foco em SQL Server, Python e automação de dados.">
+<title>Bruno Kamino Yamamoto | MIS &amp; Dados</title>
+<style>
+:root{color-scheme:light;--ink:#1c2622;--muted:#4d5d54;--paper:#f6f6ee;--white:#fffefa;--line:#d6ddd1;--green:#174a39;--lime:#ddf58e;--dark:#17362b;--mono:ui-monospace,SFMono-Regular,Consolas,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid #b05a28;outline-offset:4px}
+.wrap{width:min(1120px,calc(100% - 48px));margin-inline:auto}
+header{background:var(--white);border-bottom:1px solid var(--line)}
+.top{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{text-decoration:none;font-weight:750;display:flex;align-items:center;gap:10px}
+.mark{display:grid;place-items:center;background:var(--dark);color:var(--lime);width:36px;height:36px;border-radius:9px;font:700 13px var(--mono)}
+nav{display:flex;gap:24px;flex-wrap:wrap;font-size:.88rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{text-decoration:underline}
+.hero{padding-block:76px 62px;display:grid;grid-template-columns:1.35fr .85fr;align-items:center;gap:56px}
+.eyebrow{font:700 .77rem/1.5 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--green);margin:0 0 14px}
+h1,h2,h3,p{margin-top:0}
+h1,h2{font-family:Georgia,serif;font-weight:500;line-height:1.06;letter-spacing:-.047em}
+h1{font-size:clamp(3.25rem,7.4vw,6.15rem);margin-bottom:20px}
+h2{font-size:clamp(2.25rem,4.5vw,3.75rem);margin-bottom:12px}
+h3{font-size:1.16rem;line-height:1.35;margin-bottom:8px}
+.lead{font-size:1.13rem;max-width:56ch;color:var(--muted)}
+.actions,.filters,.controls{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.action,.filter{border:1px solid var(--line);background:var(--white);color:var(--ink);border-radius:8px;padding:8px 14px;text-decoration:none;font-size:.88rem;font-weight:650}
+.action.primary,.filter[aria-pressed=true]{background:var(--dark);border-color:var(--dark);color:#fff}
+.action:hover,.filter:hover{border-color:var(--green)}
+.pipeline{background:var(--dark);color:white;border-radius:18px;padding:26px 27px 24px}
+.pipeline .eyebrow{color:var(--lime)}
+.pipeline ol{list-style:none;padding:0;margin:0}
+.pipeline li{display:grid;grid-template-columns:20px 1fr;gap:13px;position:relative;padding:12px 0;border-bottom:1px solid #3c5b4e}
+.pipeline li:last-child{border-bottom:0;padding-bottom:0}
+.dot{height:9px;width:9px;margin-top:8px;background:var(--lime);border-radius:50%}
+.pipeline strong,.pipeline small{display:block}
+.pipeline small{color:#d1dfd5}
+section{padding-block:54px;border-top:1px solid var(--line);scroll-margin:16px}
+.section-intro{color:var(--muted);max-width:70ch;margin-bottom:22px}
+.timeline{border-left:2px solid #bcccbe;margin:26px 0 0 6px;padding-left:23px;display:grid;gap:20px}
+.timeline article{position:relative}
+.timeline article::before{content:"";position:absolute;background:var(--green);border:3px solid var(--paper);border-radius:50%;width:13px;height:13px;left:-33px;top:5px}
+.timeline p{margin-bottom:0;color:var(--muted)}
+.timeline .date{font:700 .76rem/1.55 var(--mono);color:var(--green);display:block;margin-bottom:4px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:16px;align-items:start}
+.card{background:var(--white);border:1px solid var(--line);border-radius:13px;padding:19px}
+.card summary{cursor:pointer}
+.card summary::marker{color:var(--green)}
+.card summary strong{font-size:1.07rem}
+.card p{color:var(--muted);margin:9px 0}
+.card ul{padding-left:20px;margin:8px 0 0}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.tag{background:#e9efe5;color:#254737;border-radius:5px;padding:2px 7px;font:650 .77rem/1.65 var(--mono)}
+.demo{border:1px solid var(--line);border-radius:16px;background:var(--white);overflow:hidden}
+.demo-head{padding:19px 22px;background:#eaf1e5}
+.demo-body{display:grid;grid-template-columns:1.2fr 1fr;gap:22px;padding:22px}
+label{font-size:.88rem;font-weight:650}
+select{max-width:100%;font:inherit;background:var(--white);border:1px solid #9aab9c;border-radius:6px;padding:5px 9px}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:15px 0}
+.metric{background:var(--paper);padding:9px;border-radius:8px;min-width:0}
+.metric strong,.metric span{display:block}
+.metric strong{font-size:clamp(.92rem,2.2vw,1.2rem);overflow-wrap:anywhere}
+.metric span{font-size:.75rem;color:var(--muted)}
+.table-wrap{overflow:auto}
+table{border-collapse:collapse;width:100%;text-align:left;font-size:.86rem;white-space:nowrap}
+th,td{padding:7px 9px;border-bottom:1px solid var(--line)}
+th{background:var(--paper)}
+caption{text-align:left;font-size:.8rem;margin-bottom:6px;color:var(--muted)}
+.code{min-width:0}
+pre{margin:0;padding:16px;background:var(--dark);color:#edf6e9;border-radius:9px;overflow:auto;font:.8rem/1.55 var(--mono);tab-size:2}
+.code + .code{margin-top:13px}
+.code summary{cursor:pointer;font-weight:700;margin-bottom:8px}
+.note{color:var(--muted);font-size:.87rem;margin:12px 0 0}
+.skills{grid-template-columns:repeat(3,minmax(0,1fr))}
+.skills li{margin-block:3px}
+footer{border-top:1px solid var(--line);padding-block:25px 35px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+[hidden]{display:none!important}
+@media(max-width:800px){.hero{gap:24px;padding-block:46px;grid-template-columns:1fr}.demo-body{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.wrap{width:calc(100% - 30px)}.top{align-items:flex-start;flex-direction:column;gap:10px;padding-block:12px}nav{gap:13px}.hero{padding-block:34px}section{padding-block:36px}.grid,.skills{grid-template-columns:1fr}.demo-head,.demo-body{padding:13px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body,header{background:white;color:black}header,.actions,.filters,#exemplo,footer,.pipeline{display:none}.wrap{width:auto}.hero{display:block;padding:0 0 18px}h1{font-size:34pt}h2{font-size:23pt}section{padding-block:14px}.grid{gap:7px}.card{break-inside:avoid;padding:9px}details[hidden]{display:block!important}details::details-content{content-visibility:visible!important}}
+</style>
+</head>
+<body id="topo">
+<header>
+  <div class="wrap top">
+    <a class="brand" href="#topo"><span class="mark" aria-hidden="true">BK</span> Bruno Kamino</a>
+    <nav aria-label="Seções do currículo">
+      <a href="#experiencia">Experiência</a><a href="#projetos">Projetos</a><a href="#exemplo">Demonstração</a><a href="#habilidades">Habilidades</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Assistente de MIS Júnior · Araçatuba, SP</p>
+      <h1>Bruno Kamino Yamamoto</h1>
+      <p class="lead">Desenvolvo e otimizo processos de dados com SQL Server, Python e Excel. Crio interfaces gráficas para consultas e relatórios, automatizo importações e disparos de e-mails e valido os dados antes da entrega.</p>
+      <div class="actions">
+        <a class="action primary" href="#projetos">Explorar projetos</a>
+        <button class="action" type="button" id="print">Imprimir currículo</button>
+      </div>
+    </div>
+    <aside class="pipeline" aria-label="Etapas de trabalho com dados">
+      <p class="eyebrow">Da origem à entrega</p>
+      <ol>
+        <li><span class="dot"></span><div><strong>Extrair</strong><small>Consultas T-SQL, procedures e conexões ODBC</small></div></li>
+        <li><span class="dot"></span><div><strong>Tratar e conferir</strong><small>Regras de datas, chaves e reconciliação de volumes</small></div></li>
+        <li><span class="dot"></span><div><strong>Entregar</strong><small>Relatórios em Excel, interfaces e e-mails operacionais</small></div></li>
+        <li><span class="dot"></span><div><strong>Acompanhar</strong><small>Histórico de jobs, status e logs de execução</small></div></li>
+      </ol>
+    </aside>
+  </div>
+
+  <section id="experiencia">
+    <p class="eyebrow">Trajetória</p>
+    <h2>Experiência profissional</h2>
+    <div class="timeline">
+      <article><span class="date">Desde 2025</span><h3>Assistente de MIS Júnior · Operações de cobrança</h3>
+        <p>Desenvolvo automações, consultas e relatórios que apoiam o acompanhamento de carteiras. Otimizo consultas e rotinas recorrentes, integro ferramentas desktop ao banco de dados e mantenho processos de importação, consolidação, envio de relatórios e conferência de indicadores.</p>
+      </article>
+      <article><h3>Experiência anterior · Atendimento e operação</h3>
+        <p>A vivência na operação de teleatendimento ajuda a interpretar eventos de discagem, contato e acordo e a transformar dúvidas da equipe em critérios de relatório.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <p class="eyebrow">Trabalhos selecionados</p>
+    <h2>Projetos e automações</h2>
+    <p class="section-intro">Abra um projeto para ver as regras, decisões técnicas e validações do fluxo.</p>
+    <div class="filters" role="group" aria-label="Filtrar projetos por tecnologia">
+      <button class="filter" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+      <button class="filter" type="button" data-filter="sql" aria-pressed="false">SQL Server</button>
+      <button class="filter" type="button" data-filter="python" aria-pressed="false">Python</button>
+      <button class="filter" type="button" data-filter="integracao" aria-pressed="false">Integrações</button>
+    </div>
+    <p class="note" id="project-count" role="status">8 projetos</p>
+    <div class="grid">
+      <details class="card project" data-tech="sql integracao">
+        <summary><strong>Conciliação de carteira e acordos</strong></summary>
+        <p>Criei consultas para acompanhar estoque, entradas e saídas e cruzar os títulos com pagamentos e renegociações.</p>
+        <ul><li>Modelei critérios de processamento de acordo com o tipo de movimentação.</li><li>Conferi divergências entre os registros detalhados e os totais consolidados.</li></ul>
+        <div class="tags"><span class="tag">T-SQL</span><span class="tag">EXISTS</span><span class="tag">Validação</span></div>
+      </details>
+      <details class="card project" data-tech="sql">
+        <summary><strong>Funil de atendimento e cobrança</strong></summary>
+        <p>Estruturei relatórios de discagens, atendimento, contato com a pessoa certa (CPC) e acordos.</p>
+        <ul><li>Padronizei eventos do discador e do CRM para consolidar volumes por período e carteira.</li><li>Revisei regras de contagem e duplicidades para conferir as etapas do funil.</li></ul>
+        <div class="tags"><span class="tag">Agregações</span><span class="tag">CRM</span><span class="tag">Indicadores</span></div>
+      </details>
+      <details class="card project" data-tech="sql python integracao">
+        <summary><strong>Gerador de relatórios por carteira</strong></summary>
+        <p>Desenvolvi uma ferramenta para parametrizar consultas por datas e carteira e exportar os resultados em Excel.</p>
+        <ul><li>Integrei uma interface Tkinter a uma stored procedure via ODBC.</li><li>Trabalhei em uma versão web interna com C# e Razor para o fluxo de geração de relatórios.</li></ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">XLSX</span><span class="tag">C# / Razor</span></div>
+      </details>
+      <details class="card project" data-tech="sql python integracao">
+        <summary><strong>Exportador SQL automatizado</strong></summary>
+        <p>Desenvolvi um exportador em Python com execução interativa e automática para gerar planilhas a partir do SQL Server.</p>
+        <ul><li>Separei a configuração da consulta, detectei drivers ODBC compatíveis e preparei o empacotamento como executável.</li><li>Implementei registro por execução e limite de tempo para rotinas agendadas.</li></ul>
+        <div class="tags"><span class="tag">ODBC</span><span class="tag">JSON</span><span class="tag">Logs</span><span class="tag">SQL Server Agent</span></div>
+      </details>
+      <details class="card project" data-tech="sql">
+        <summary><strong>Otimização de processos SQL</strong></summary>
+        <p>Revisei consultas e rotinas de processamento histórico para reduzir o volume de dados lido e transferido entre servidores.</p>
+        <ul><li>Usei filtros por intervalo, tabelas temporárias, índices temporários e consultas remotas com OPENQUERY.</li><li>Preservei as regras de negócio e a estrutura dos relatórios e comparei as saídas com os resultados de referência.</li></ul>
+        <div class="tags"><span class="tag">SQL dinâmico</span><span class="tag">OPENQUERY</span><span class="tag">Tabelas temporárias</span></div>
+      </details>
+      <details class="card project" data-tech="sql integracao">
+        <summary><strong>Monitoramento de jobs</strong></summary>
+        <p>Criei uma consulta para acompanhar rotinas agendadas pelo histórico do SQL Server Agent.</p>
+        <ul><li>Identifiquei a última execução e diferenciei sucesso, falha e outros estados do job.</li><li>Organizei o retorno por data e horário para simplificar a conferência operacional.</li></ul>
+        <div class="tags"><span class="tag">SQL Server Agent</span><span class="tag">Histórico</span><span class="tag">Diagnóstico</span></div>
+      </details>
+      <details class="card project" data-tech="sql python integracao">
+        <summary><strong>Importação automatizada de planilhas</strong></summary>
+        <p>Criei scripts em Python para ler arquivos Excel, tratar os dados com pandas e carregar os registros no SQL Server.</p>
+        <ul><li>Padronizei colunas, tipos e campos vazios antes da carga.</li><li>Incluí conferências para identificar inconsistências de preenchimento e entradas sem registros para importar.</li></ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">Excel</span><span class="tag">SQL Server</span></div>
+      </details>
+      <details class="card project" data-tech="python integracao">
+        <summary><strong>Disparo automatizado de e-mails</strong></summary>
+        <p>Desenvolvi e mantive scripts para automatizar o envio de relatórios operacionais por e-mail.</p>
+        <ul><li>Organizei o fluxo de preparação dos arquivos, montagem das mensagens e envio.</li><li>Integrei o disparo às rotinas recorrentes de geração e distribuição de relatórios.</li></ul>
+        <div class="tags"><span class="tag">Scripts</span><span class="tag">E-mail</span><span class="tag">Relatórios</span></div>
+      </details>
+    </div>
+  </section>
+
+  <section id="exemplo">
+    <p class="eyebrow">Exemplo com dados fictícios</p>
+    <h2>Estoque de exemplo por categoria</h2>
+    <p class="section-intro">Escolha um lote de inventário para ver a última revisão de cada produto. O resumo conta produtos distintos e soma as unidades disponíveis por categoria.</p>
+    <div class="demo">
+      <div class="demo-head controls">
+        <label for="batch">Lote</label>
+        <select id="batch"><option value="A">Lote A</option><option value="B">Lote B</option></select>
+        <label for="category">Categoria</label>
+        <select id="category"><option value="all">Todas</option><option>Papelaria</option><option>Eletrônicos</option><option>Acessórios</option></select>
+      </div>
+      <div class="demo-body">
+        <div>
+          <div class="metrics" aria-live="polite" aria-atomic="true">
+            <div class="metric"><strong id="metric-rows">—</strong><span>Registros de origem</span></div>
+            <div class="metric"><strong id="metric-products">—</strong><span>Produtos distintos</span></div>
+            <div class="metric"><strong id="metric-units">—</strong><span>Unidades em estoque</span></div>
+          </div>
+          <div class="table-wrap">
+            <table><caption>Estoque por categoria</caption><thead><tr><th scope="col">Categoria</th><th scope="col">Produtos</th><th scope="col">Unidades</th></tr></thead><tbody id="report"></tbody></table>
+          </div>
+          <p class="note">Os registros de origem mostram o total do lote. O filtro de categoria é aplicado após selecionar a última revisão de cada produto.</p>
+        </div>
+        <div>
+        <details class="code" open>
+          <summary>Ver exemplo em T-SQL</summary>
+<pre><code>WITH UltimaRevisao AS (
+  SELECT Produto, Categoria, Unidades,
+         ROW_NUMBER() OVER (
+           PARTITION BY Produto
+           ORDER BY Revisao DESC, RegistroId DESC
+         ) AS rn
+  FROM dbo.InventarioExemplo
+  WHERE Lote = @Lote
+)
+SELECT Categoria, COUNT(*) AS Produtos,
+       SUM(Unidades) AS Unidades
+FROM UltimaRevisao
+WHERE rn = 1
+  AND (@Categoria IS NULL OR Categoria = @Categoria)
+GROUP BY Categoria;</code></pre>
+        </details>
+        <details class="code">
+          <summary>Ver exportação em Python</summary>
+<pre><code>from pathlib import Path
+
+import pandas as pd
+
+# Resultado fictício da consulta para o Lote A.
+resumo = pd.DataFrame({
+    "Categoria": ["Papelaria", "Eletrônicos", "Acessórios"],
+    "Produtos": [1, 2, 1],
+    "Unidades": [24, 28, 17],
+})
+
+if resumo["Categoria"].duplicated().any():
+    raise ValueError("Categoria duplicada no resumo")
+
+resumo.to_excel(
+    Path("inventario_exemplo.xlsx"),
+    sheet_name="Resumo", index=False,
+)</code></pre>
+          <p class="note">Exemplo reproduzível com pandas e openpyxl.</p>
+        </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <p class="eyebrow">Ferramentas e técnicas</p>
+    <h2>Habilidades</h2>
+    <div class="grid skills">
+      <article class="card"><h3>SQL Server e T-SQL</h3><ul><li>Consultas, stored procedures e SQL dinâmico</li><li>JOIN, EXISTS, CTEs e tabelas temporárias</li><li>Agregações, funções de janela e deduplicação</li></ul></article>
+      <article class="card"><h3>Otimização de processos</h3><ul><li>Revisão de filtros, junções e volume de dados processado</li><li>Índices em tabelas temporárias e redução do volume transferido entre servidores</li><li>Conferência dos resultados antes e depois dos ajustes</li></ul></article>
+      <article class="card"><h3>Interfaces Python com SQL Server</h3><ul><li>Aplicações desktop em Tkinter</li><li>Integração com consultas e procedures via ODBC</li><li>Formulários com parâmetros e exportação para Excel</li></ul></article>
+      <article class="card"><h3>Importação e tratamento de dados</h3><ul><li>Scripts de leitura e escrita de planilhas XLSX</li><li>Limpeza, padronização e validação com pandas</li><li>Carga no SQL Server e rotinas com Excel e VBA</li></ul></article>
+      <article class="card"><h3>Automação e disparo de e-mails</h3><ul><li>Scripts de geração e envio de relatórios com anexos</li><li>Execução via linha de comando, configuração em JSON e empacotamento de executáveis</li><li>Agendamento, logs, tratamento de erros e limites de tempo</li></ul></article>
+      <article class="card"><h3>Integrações e monitoramento</h3><ul><li>SQL Server Agent e histórico de execução de jobs</li><li>Linked servers e OPENQUERY</li><li>Consolidação de dados do CRM e do discador</li><li>Interfaces web internas em C# e Razor</li></ul></article>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>Bruno Kamino Yamamoto · MIS, dados e automação</span><a href="https://github.com/brunokamino">Perfil no GitHub</a></div></footer>
+<script>
+const filters = document.querySelectorAll('[data-filter]');
+const projects = [...document.querySelectorAll('.project')];
+const projectCount = document.querySelector('#project-count');
+
+for (const button of filters) {
+  button.addEventListener('click', () => {
+    const category = button.dataset.filter;
+    for (const filter of filters) {
+      filter.setAttribute('aria-pressed', String(filter === button));
+    }
+    for (const project of projects) {
+      project.hidden = category !== 'todos' && !project.dataset.tech.split(' ').includes(category);
+    }
+    const count = projects.filter(project => !project.hidden).length;
+    projectCount.textContent = count === 1 ? '1 projeto' : count + ' projetos';
+  });
+}
+
+const batch = document.querySelector('#batch');
+const category = document.querySelector('#category');
+const report = document.querySelector('#report');
+const categories = ['Papelaria', 'Eletrônicos', 'Acessórios'];
+// Lote, revisão, ID do registro, produto, categoria e unidades.
+const records = [
+  ['A', 1, 1, 'P01', 0, 32], ['A', 2, 2, 'P01', 1, 18],
+  ['A', 1, 3, 'P02', 0, 24], ['A', 1, 4, 'P03', 2, 19],
+  ['A', 1, 5, 'P03', 2, 17], ['A', 1, 6, 'P04', 1, 10],
+  ['B', 1, 7, 'P01', 1, 15], ['B', 2, 8, 'P01', 2, 12],
+  ['B', 1, 9, 'P04', 1, 14], ['B', 1, 10, 'P05', 0, 26],
+  ['B', 1, 11, 'P06', 0, 16], ['B', 2, 12, 'P06', 1, 21],
+  ['B', 1, 13, 'P07', 2, 37]
+];
+
+function summarize(selectedBatch, selectedCategory) {
+  const source = records.filter(([lot]) => lot === selectedBatch);
+  source.sort((a, b) => b[1] - a[1] || b[2] - a[2]);
+
+  const latest = new Map();
+  for (const row of source) {
+    const product = row[3];
+    if (!latest.has(product)) latest.set(product, row);
+  }
+
+  const groups = categories.map(label => ({label, products: 0, units: 0}));
+  for (const [, , , , index, units] of latest.values()) {
+    groups[index].products++;
+    groups[index].units += units;
+  }
+  const visible = groups.filter(group => selectedCategory === 'all' || group.label === selectedCategory);
+  return {sourceSize: source.length, groups: visible};
+}
+
+function renderReport() {
+  const {sourceSize, groups} = summarize(batch.value, category.value);
+  const products = groups.reduce((total, group) => total + group.products, 0);
+  const units = groups.reduce((total, group) => total + group.units, 0);
+  document.querySelector('#metric-rows').textContent = sourceSize;
+  document.querySelector('#metric-products').textContent = products;
+  document.querySelector('#metric-units').textContent = units;
+  report.replaceChildren();
+  for (const group of groups) {
+    const row = report.insertRow();
+    for (const value of [group.label, group.products, group.units]) {
+      row.insertCell().textContent = value;
+    }
+  }
+}
+
+batch.addEventListener('change', renderReport);
+category.addEventListener('change', renderReport);
+renderReport();
+
+const printState = new Map();
+window.addEventListener('beforeprint', () => {
+  for (const project of projects) {
+    printState.set(project, {open: project.open, hidden: project.hidden});
+    project.open = true;
+    project.hidden = false;
+  }
+});
+window.addEventListener('afterprint', () => {
+  for (const [project, state] of printState) Object.assign(project, state);
+  printState.clear();
+});
+document.querySelector('#print').addEventListener('click', () => window.print());
+</script>
+</body>
+</html>
